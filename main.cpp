@@ -9,16 +9,17 @@ bool cmp(const std::string& a, const std::string& b) {
 
 int main()
 {
-    std::string pinyin = ZhToPY::instance()->zhToPY("中文");  // pinyin : "zhongwen"
-    std::string jinpin = ZhToPY::instance()->zhToJP("中文");  // jinpin : "ZW"
-    std::string shouzimu = ZhToPY::instance()->zhToZM("中文");   // shouzimu: "Z"
-    std::string abc = ZhToPY::instance()->zhToZM("abc");   // shouzimu: "a"
-    std::string abc1 = ZhToPY::instance()->zhToZM("1");   // shouzimu: "1"
+    std::string pinyin = ZhToPY::instance()->zhToPY("中文");  // "zhongwen"
+    std::string jinpin = ZhToPY::instance()->zhToJP("中文");  // "ZW"
+    std::string shouzimu = ZhToPY::instance()->zhToZM("中文");   // "Z"
+    std::string abc = ZhToPY::instance()->zhToZM("abc");   // "a"
+    std::string num = ZhToPY::instance()->zhToZM("1");   // "1"
 
+    std::cout << pinyin << std::endl;
     std::cout << jinpin << std::endl;
     std::cout << shouzimu << std::endl;
     std::cout << abc << std::endl;
-    std::cout << abc1 << std::endl;
+    std::cout << num << std::endl;
 
     // case default
     std::cout << "default:" << std::endl;

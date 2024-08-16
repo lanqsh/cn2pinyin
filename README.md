@@ -1,16 +1,16 @@
-# zhtopy
-Chinese pinyin to the first letter
+# cn2pinyin (zhtopy)
+Single file, Head only, Chinese pinyin to pinyin
 
-中文字符串转首字母,主要是为了进行排序
+中文字符串转首字母,主要是为了容器排序
 
 
 示例
 ```
-    std::string pinyin = ZhToPY::instance()->zhToPY("中文");  // pinyin : "zhongwen"
-    std::string jinpin = ZhToPY::instance()->zhToJP("中文");  // jinpin : "ZW"
-    std::string shouzimu = ZhToPY::instance()->zhToZM("中文");   // shouzimu: "Z"
-    std::string abc = ZhToPY::instance()->zhToZM("abc");   // shouzimu: "a"
-    std::string abc1 = ZhToPY::instance()->zhToZM("1");   // shouzimu: "1"  
+    std::string pinyin = ZhToPY::instance()->zhToPY("中文");  // "zhongwen"
+    std::string jinpin = ZhToPY::instance()->zhToJP("中文");  // "ZW"
+    std::string shouzimu = ZhToPY::instance()->zhToZM("中文");   // "Z"
+    std::string abc = ZhToPY::instance()->zhToZM("abc");   // "a"
+    std::string num = ZhToPY::instance()->zhToZM("1");   // "1" 
 ```
 
 用于容器排序
