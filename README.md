@@ -1,5 +1,5 @@
 # cn2pinyin (zhtopy)
-Single file, Head only, Chinese pinyin to pinyin
+Single file, Head only, Chinese to pinyin
 
 中文字符串转首字母,主要是为了容器排序
 
