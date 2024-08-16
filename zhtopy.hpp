@@ -577,16 +577,13 @@ static bool utf8_to_unicode(const std::string &utf8, std::vector<unsigned int> &
 }
 
 int get_code_point(const std::string &name) {
-    //    std::wstring_convert<std::codecvt_utf8<char32_t>, char32_t> cv;
-    //    auto str32 = cv.from_bytes(name);
+    if (name.empty()) return 0;
     int name_code_point = 0;
-    //    for (auto c : str32)
-    //        name_code_point = uint_least32_t(c);
 
     std::vector<unsigned int> unicode;
     utf8_to_unicode(name,unicode);
 
-    name_code_point = *unicode.begin();
+    if (!unicode.empty()) name_code_point = *unicode.begin();
 
     return name_code_point;
 }
